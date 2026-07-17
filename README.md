@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+  <img alt="Lifetime GitHub contribution stats" src="assets/stats-light.svg">
+</picture>
+
 Empowering researchers in metabolic modeling to work easier, faster and more reproducible
 
 1. [MxlPy](https://github.com/Computational-Biology-Aachen/MxlPy): Easily build mechanistic learning models
