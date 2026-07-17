@@ -1,33 +1,37 @@
+# Empowering researchers in metabolic modeling
+
+...to make work easier, faster and more reproducible
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
   <img alt="Lifetime GitHub contribution stats" src="assets/stats-light.svg">
 </picture>
 
-Empowering researchers in metabolic modeling to work easier, faster and more reproducible
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
+  <img alt="Top languages" src="assets/languages-light.svg">
+</picture>
 
-1. [MxlPy](https://github.com/Computational-Biology-Aachen/MxlPy): Easily build mechanistic learning models
 
-2. [MxlBricks](https://github.com/Computational-Biology-Aachen/mxl-bricks): Combine reaction bricks to quickly build larger models
 
-3. [MxlWeb](https://github.com/Computational-Biology-Aachen/mxl-web): Experimental toolbox to run ODE models in the browser
-
-4. [PySBML](https://github.com/Computational-Biology-Aachen/pysbml): Make SBML models simpler
-
-5. [absorpig](https://github.com/Computational-Biology-Aachen/absorpig): Extract **pig**ment composition of measured **absor**ption spectra of photosynthetic organisms
-
-6. [modelbase](https://gitlab.com/qtb-hhu/modelbase-software): Build & simulate metabolic networks including isotope-labelled versions
-
-7. [qtbmodels](https://gitlab.com/marvin.vanaalst/qtbmodels): Precursor to MxlBricks
-
-8. [moped](https://gitlab.com/qtb-hhu/moped): Integrative hub for reproducible construction, modification, curation and analysis of genome-scale metabolic models
-
-9. [dismo](https://gitlab.com/qtb-hhu/dismo): Build and analysing discrete spatial models based on ordinary differential equations
-
-10. [matplotlib cookbook](https://gitlab.com/marvin.vanaalst/matplotlib-cookbook): Small collection of recipes for matplotlib
-
-11. [difai](https://gitlab.com/marvin.vanaalst/difai): Did I forget any imports? updates your requirements file
-
-12. [hue sunrise](https://gitlab.com/marvin.vanaalst/hue-sunrise): Enjoy waking up more gently by having your philips hue lights simulate a sunrise
-
-13. cycparser [py](https://gitlab.com/qtb-hhu/cycparser-py) & [rs](https://gitlab.com/qtb-hhu/cycparser-rs): Parse [MetaCyc](https://metacyc.org/), [BioCyc](https://biocyc.org/) or some other \*cyc flatfiles
+| Project                                                                                                                                                                                                                                                                                                                                                   | Description                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **[MxlPy](https://github.com/Computational-Biology-Aachen/MxlPy)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/MxlPy?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/MxlPy?style=flat-square&label=updated)                                 | Easily build mechanistic learning models                                                                            |
+| **[MxlModels](https://github.com/Computational-Biology-Aachen/mxl-models)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/mxl-models?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/mxl-models?style=flat-square&label=updated)              | Python package of reference mechanistic models                                                                      |
+| **[MxlBricks](https://github.com/Computational-Biology-Aachen/mxl-bricks)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/mxl-bricks?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/mxl-bricks?style=flat-square&label=updated)              | Combine reaction bricks to quickly build larger models                                                              |
+| **[MxlWeb](https://github.com/Computational-Biology-Aachen/mxl-web)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/mxl-web?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/mxl-web?style=flat-square&label=updated)                          | Experimental toolbox to run ODE models in the browser                                                               |
+| **[GreenSloth](https://github.com/Computational-Biology-Aachen/green-sloth)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/green-sloth?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/green-sloth?style=flat-square&label=updated)          | Interactive, client-side explorer for photosynthesis ODE models                                                     |
+| **[PySBML](https://github.com/Computational-Biology-Aachen/pysbml)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/pysbml?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/pysbml?style=flat-square&label=updated)                             | Make SBML models simpler                                                                                            |
+| **[absorpig](https://github.com/Computational-Biology-Aachen/absorpig)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/absorpig?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/absorpig?style=flat-square&label=updated)                     | Extract **pig**ment composition of measured **absor**ption spectra of photosynthetic organisms                      |
+| **[CpblDesign](https://github.com/Computational-Biology-Aachen/design)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/design?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/design?style=flat-square&label=updated)                         | CPBL corporate design                                                                                               |
+| **[Parameteriser](https://github.com/Computational-Biology-Aachen/parameteriser)**<br>![Stars](https://img.shields.io/github/stars/Computational-Biology-Aachen/parameteriser?style=flat-square&logo=github&label=stars) ![Updated](https://img.shields.io/github/last-commit/Computational-Biology-Aachen/parameteriser?style=flat-square&label=updated) | Interface parameter databases like BRENDA for kinetic model parameterisation                                        |
+| **[modelbase](https://gitlab.com/qtb-hhu/modelbase-software)**<br>![Stars](https://img.shields.io/gitlab/stars/qtb-hhu%2Fmodelbase-software?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/qtb-hhu%2Fmodelbase-software?style=flat-square&label=updated)                                                 | Build & simulate metabolic networks including isotope-labelled versions                                             |
+| **[qtbmodels](https://gitlab.com/marvin.vanaalst/qtbmodels)**<br>![Stars](https://img.shields.io/gitlab/stars/marvin.vanaalst%2Fqtbmodels?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/marvin.vanaalst%2Fqtbmodels?style=flat-square&label=updated)                                                    | Precursor to MxlBricks                                                                                              |
+| **[moped](https://gitlab.com/qtb-hhu/moped)**<br>![Stars](https://img.shields.io/gitlab/stars/qtb-hhu%2Fmoped?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/qtb-hhu%2Fmoped?style=flat-square&label=updated)                                                                                            | Integrative hub for reproducible construction, modification, curation and analysis of genome-scale metabolic models |
+| **[dismo](https://gitlab.com/qtb-hhu/dismo)**<br>![Stars](https://img.shields.io/gitlab/stars/qtb-hhu%2Fdismo?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/qtb-hhu%2Fdismo?style=flat-square&label=updated)                                                                                            | Build and analysing discrete spatial models based on ordinary differential equations                                |
+| **[matplotlib cookbook](https://gitlab.com/marvin.vanaalst/matplotlib-cookbook)**<br>![Stars](https://img.shields.io/gitlab/stars/marvin.vanaalst%2Fmatplotlib-cookbook?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/marvin.vanaalst%2Fmatplotlib-cookbook?style=flat-square&label=updated)            | Small collection of recipes for matplotlib                                                                          |
+| **[difai](https://gitlab.com/marvin.vanaalst/difai)**<br>![Stars](https://img.shields.io/gitlab/stars/marvin.vanaalst%2Fdifai?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/marvin.vanaalst%2Fdifai?style=flat-square&label=updated)                                                                    | Did I forget any imports? updates your requirements file                                                            |
+| **[hue sunrise](https://gitlab.com/marvin.vanaalst/hue-sunrise)**<br>![Stars](https://img.shields.io/gitlab/stars/marvin.vanaalst%2Fhue-sunrise?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/marvin.vanaalst%2Fhue-sunrise?style=flat-square&label=updated)                                            | Enjoy waking up more gently by having your philips hue lights simulate a sunrise                                    |
+| **cycparser** [py](https://gitlab.com/qtb-hhu/cycparser-py) & [rs](https://gitlab.com/qtb-hhu/cycparser-rs)<br>![Stars](https://img.shields.io/gitlab/stars/qtb-hhu%2Fcycparser-py?style=flat-square&logo=gitlab&label=stars) ![Updated](https://img.shields.io/gitlab/last-commit/qtb-hhu%2Fcycparser-py?style=flat-square&label=updated)                | Parse [MetaCyc](https://metacyc.org/), [BioCyc](https://biocyc.org/) or some other \*cyc flatfiles                  |
