@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="174" viewBox="0 0 700 174">
+  <rect x="0.5" y="0.5" width="699" height="173" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="0.5" y="0.5" width="699" height="4" rx="2" fill="url(#lang-gradient-light)"/>
+  <defs>
+    <linearGradient id="lang-gradient-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0969da"/>
+      <stop offset="50%" stop-color="#8250df"/>
+      <stop offset="100%" stop-color="#1a7f37"/>
+    </linearGradient>
+  </defs>
+  <text x="24" y="32" font-family="ui-monospace, monospace" font-size="13" font-weight="600" letter-spacing="2" fill="#57606a">TOP LANGUAGES</text>
+  <text x="676" y="32" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#57606a">as of 2026-07-17</text>
+  <line x1="24" y1="46" x2="676" y2="46" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="24" y="60" width="652" height="14" rx="7" fill="#d0d7de"/>
+  <clipPath id="bar-clip-light"><rect x="24" y="60" width="652" height="14" rx="7"/></clipPath>
+  <g clip-path="url(#bar-clip-light)">
+    <rect x="24.00" y="60" width="338.39" height="14" fill="#3572A5"/><rect x="362.39" y="60" width="234.07" height="14" fill="#ff3e00"/><rect x="596.46" y="60" width="31.95" height="14" fill="#f1e05a"/><rect x="628.40" y="60" width="21.52" height="14" fill="#3178c6"/><rect x="649.92" y="60" width="11.08" height="14" fill="#563d7c"/><rect x="661.00" y="60" width="15.65" height="14" fill="#6e7681"/>
+  </g>
+  <circle cx="29" cy="96" r="5" fill="#3572A5"/><text x="40" y="100" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">Python <tspan fill="#57606a">51.9%</tspan></text><circle cx="246" cy="96" r="5" fill="#ff3e00"/><text x="257" y="100" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">Svelte <tspan fill="#57606a">35.9%</tspan></text><circle cx="464" cy="96" r="5" fill="#f1e05a"/><text x="475" y="100" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">JavaScript <tspan fill="#57606a">4.9%</tspan></text><circle cx="29" cy="120" r="5" fill="#3178c6"/><text x="40" y="124" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">TypeScript <tspan fill="#57606a">3.3%</tspan></text><circle cx="246" cy="120" r="5" fill="#563d7c"/><text x="257" y="124" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">CSS <tspan fill="#57606a">1.7%</tspan></text><circle cx="464" cy="120" r="5" fill="#6e7681"/><text x="475" y="124" font-family="ui-monospace, monospace" font-size="12" fill="#24292f">Other <tspan fill="#57606a">2.4%</tspan></text>
+</svg>

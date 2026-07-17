@@ -1,0 +1,35 @@
+{
+  "languages": [
+    {
+      "name": "Python",
+      "bytes": 91775,
+      "pct": 51.9
+    },
+    {
+      "name": "Svelte",
+      "bytes": 63387,
+      "pct": 35.9
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 8623,
+      "pct": 4.9
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 5784,
+      "pct": 3.3
+    },
+    {
+      "name": "CSS",
+      "bytes": 2984,
+      "pct": 1.7
+    },
+    {
+      "name": "Other",
+      "bytes": 4168,
+      "pct": 2.4
+    }
+  ],
+  "last_updated": "2026-07-17"
+}
