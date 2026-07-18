@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
-    <img alt="Lifetime GitHub contribution stats and top languages" src="assets/stats-light.svg" width="50%">
+    <img alt="Lifetime GitHub contribution stats and top languages" src="assets/stats-light.svg" width="80%">
   </picture>
 </p>
 
