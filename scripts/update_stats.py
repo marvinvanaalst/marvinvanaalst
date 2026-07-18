@@ -37,8 +37,6 @@ SVG_LIGHT_PATH = ROOT / "assets" / "stats-light.svg"
 SVG_DARK_PATH = ROOT / "assets" / "stats-dark.svg"
 
 LANGUAGES_CACHE_PATH = ROOT / "data" / "languages_cache.json"
-LANGUAGES_SVG_LIGHT_PATH = ROOT / "assets" / "languages-light.svg"
-LANGUAGES_SVG_DARK_PATH = ROOT / "assets" / "languages-dark.svg"
 TOP_LANGUAGES_COUNT = 5
 EXCLUDED_LANGUAGES = {"Jupyter Notebook"}
 
@@ -306,7 +304,11 @@ def _icon(kind: str, cx: float, color: str) -> str:
     return g
 
 
-def render_svg(stats: Stats, theme_name: str) -> str:
+LEGEND_COLUMN_X = [24, 241, 459]
+LANGUAGES_OFFSET = 150
+
+
+def render_combined_svg(stats: Stats, lang_stats: LanguageStats, theme_name: str) -> str:
     t = THEMES[theme_name]
     icon_colors = {
         "commits": t["accent"],
@@ -336,11 +338,34 @@ def render_svg(stats: Stats, theme_name: str) -> str:
         for x in (241, 459)
     )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="150" viewBox="0 0 700 150">
-  <rect x="0.5" y="0.5" width="699" height="149" rx="12" fill="{t["bg"]}" stroke="{t["border"]}"/>
-  <rect x="0.5" y="0.5" width="699" height="4" rx="2" fill="url(#accent-gradient-{theme_name})"/>
+    languages = lang_stats.languages
+    o = LANGUAGES_OFFSET
+    bar_x, bar_width = 24, 652
+    segments = ""
+    cursor = 0.0
+    for lang in languages:
+        seg_width = bar_width * lang["pct"] / 100
+        color = LANGUAGE_COLORS.get(lang["name"], LANGUAGE_COLORS["Other"])
+        segments += f'<rect x="{bar_x + cursor:.2f}" y="{o + 60}" width="{seg_width:.2f}" height="14" fill="{color}"/>'
+        cursor += seg_width
+
+    legend = ""
+    for i, lang in enumerate(languages):
+        col, row = i % 3, i // 3
+        x, y = LEGEND_COLUMN_X[col], o + 100 + row * 24
+        color = LANGUAGE_COLORS.get(lang["name"], LANGUAGE_COLORS["Other"])
+        legend += f'<circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{color}"/>'
+        legend += (
+            f'<text x="{x + 16}" y="{y}" font-family="ui-monospace, monospace" font-size="12" '
+            f'fill="{t["text"]}">{lang["name"]} <tspan fill="{t["muted"]}">{lang["pct"]:.1f}%</tspan></text>'
+        )
+
+    height = o + (150 if len(languages) <= 3 else 174)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="{height}" viewBox="0 0 700 {height}">
+  <rect x="0.5" y="0.5" width="699" height="{height - 1}" rx="12" fill="{t["bg"]}" stroke="{t["border"]}"/>
+  <rect x="0.5" y="0.5" width="699" height="4" rx="2" fill="url(#stats-gradient-{theme_name})"/>
   <defs>
-    <linearGradient id="accent-gradient-{theme_name}" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="stats-gradient-{theme_name}" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="{t["accent"]}"/>
       <stop offset="50%" stop-color="{t["accent2"]}"/>
       <stop offset="100%" stop-color="{t["accent3"]}"/>
@@ -353,61 +378,11 @@ fill="{t["muted"]}">as of {stats.last_updated}</text>
   <line x1="24" y1="46" x2="676" y2="46" stroke="{t["border"]}" stroke-width="1"/>
   {dividers}
   {columns_svg}
-</svg>
-"""
-
-
-def render_stats_svgs(stats: Stats) -> None:
-    SVG_LIGHT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    SVG_LIGHT_PATH.write_text(render_svg(stats, "light"))
-    SVG_DARK_PATH.write_text(render_svg(stats, "dark"))
-
-
-LEGEND_COLUMN_X = [24, 241, 459]
-
-
-def render_languages_svg(lang_stats: LanguageStats, theme_name: str) -> str:
-    t = THEMES[theme_name]
-    languages = lang_stats.languages
-
-    bar_x, bar_width = 24, 652
-    segments = ""
-    cursor = 0.0
-    for lang in languages:
-        seg_width = bar_width * lang["pct"] / 100
-        color = LANGUAGE_COLORS.get(lang["name"], LANGUAGE_COLORS["Other"])
-        segments += f'<rect x="{bar_x + cursor:.2f}" y="60" width="{seg_width:.2f}" height="14" fill="{color}"/>'
-        cursor += seg_width
-
-    legend = ""
-    for i, lang in enumerate(languages):
-        col, row = i % 3, i // 3
-        x, y = LEGEND_COLUMN_X[col], 100 + row * 24
-        color = LANGUAGE_COLORS.get(lang["name"], LANGUAGE_COLORS["Other"])
-        legend += f'<circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{color}"/>'
-        legend += (
-            f'<text x="{x + 16}" y="{y}" font-family="ui-monospace, monospace" font-size="12" '
-            f'fill="{t["text"]}">{lang["name"]} <tspan fill="{t["muted"]}">{lang["pct"]:.1f}%</tspan></text>'
-        )
-
-    height = 150 if len(languages) <= 3 else 174
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="{height}" viewBox="0 0 700 {height}">
-  <rect x="0.5" y="0.5" width="699" height="{height - 1}" rx="12" fill="{t["bg"]}" stroke="{t["border"]}"/>
-  <rect x="0.5" y="0.5" width="699" height="4" rx="2" fill="url(#lang-gradient-{theme_name})"/>
-  <defs>
-    <linearGradient id="lang-gradient-{theme_name}" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="{t["accent"]}"/>
-      <stop offset="50%" stop-color="{t["accent2"]}"/>
-      <stop offset="100%" stop-color="{t["accent3"]}"/>
-    </linearGradient>
-  </defs>
-  <text x="24" y="32" font-family="ui-monospace, monospace" font-size="13" font-weight="600" \
+  <text x="24" y="{o + 32}" font-family="ui-monospace, monospace" font-size="13" font-weight="600" \
 letter-spacing="2" fill="{t["muted"]}">TOP LANGUAGES</text>
-  <text x="676" y="32" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" \
-fill="{t["muted"]}">as of {lang_stats.last_updated}</text>
-  <line x1="24" y1="46" x2="676" y2="46" stroke="{t["border"]}" stroke-width="1"/>
-  <rect x="{bar_x}" y="60" width="{bar_width}" height="14" rx="7" fill="{t["border"]}"/>
-  <clipPath id="bar-clip-{theme_name}"><rect x="{bar_x}" y="60" width="{bar_width}" height="14" rx="7"/></clipPath>
+  <line x1="24" y1="{o + 46}" x2="676" y2="{o + 46}" stroke="{t["border"]}" stroke-width="1"/>
+  <rect x="{bar_x}" y="{o + 60}" width="{bar_width}" height="14" rx="7" fill="{t["border"]}"/>
+  <clipPath id="bar-clip-{theme_name}"><rect x="{bar_x}" y="{o + 60}" width="{bar_width}" height="14" rx="7"/></clipPath>
   <g clip-path="url(#bar-clip-{theme_name})">
     {segments}
   </g>
@@ -416,20 +391,20 @@ fill="{t["muted"]}">as of {lang_stats.last_updated}</text>
 """
 
 
-def render_languages_svgs(lang_stats: LanguageStats) -> None:
-    LANGUAGES_SVG_LIGHT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    LANGUAGES_SVG_LIGHT_PATH.write_text(render_languages_svg(lang_stats, "light"))
-    LANGUAGES_SVG_DARK_PATH.write_text(render_languages_svg(lang_stats, "dark"))
+def render_stats_svgs(stats: Stats, lang_stats: LanguageStats) -> None:
+    SVG_LIGHT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SVG_LIGHT_PATH.write_text(render_combined_svg(stats, lang_stats, "light"))
+    SVG_DARK_PATH.write_text(render_combined_svg(stats, lang_stats, "dark"))
 
 
 def main() -> None:
     stats = gather_stats()
     save_cache(CACHE_PATH, dataclasses.asdict(stats))
-    render_stats_svgs(stats)
 
     lang_stats = gather_languages()
     save_cache(LANGUAGES_CACHE_PATH, dataclasses.asdict(lang_stats))
-    render_languages_svgs(lang_stats)
+
+    render_stats_svgs(stats, lang_stats)
 
     print(
         f"commits={stats.commits} prs={stats.prs} prs_reviewed={stats.prs_reviewed} as_of={stats.last_updated}"

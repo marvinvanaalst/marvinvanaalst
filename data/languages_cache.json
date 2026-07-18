@@ -2,34 +2,34 @@
   "languages": [
     {
       "name": "Python",
-      "bytes": 91775,
-      "pct": 51.9
+      "bytes": 97457,
+      "pct": 53.4
     },
     {
       "name": "Svelte",
       "bytes": 63387,
-      "pct": 35.9
+      "pct": 34.8
     },
     {
       "name": "JavaScript",
       "bytes": 8623,
-      "pct": 4.9
+      "pct": 4.7
     },
     {
       "name": "TypeScript",
       "bytes": 5784,
-      "pct": 3.3
+      "pct": 3.2
     },
     {
       "name": "CSS",
       "bytes": 2984,
-      "pct": 1.7
+      "pct": 1.6
     },
     {
       "name": "Other",
       "bytes": 4168,
-      "pct": 2.4
+      "pct": 2.3
     }
   ],
-  "last_updated": "2026-07-17"
+  "last_updated": "2026-07-18"
 }

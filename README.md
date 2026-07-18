@@ -1,16 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
-  <img alt="Lifetime GitHub contribution stats" src="assets/stats-light.svg">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
-  <img alt="Top languages" src="assets/languages-light.svg">
-</picture>
-
-
 # Empowering researchers in metabolic modeling
 
 ...to make work easier, faster and more reproducible
@@ -19,13 +6,20 @@ Computational Systems Biology, RWTH Aachen
 
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--7434--0249-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-7434-0249)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dr._Marvin_van_Aalst-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dr-marvin-van-aalst-41a691175/)
+
 [![GitHub](https://img.shields.io/badge/GitHub-marvinvanaalst-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/marvinvanaalst)
 [![GitLab](https://img.shields.io/badge/GitLab-marvin.vanaalst-FC6D26?style=flat-square&logo=gitlab&logoColor=white)](https://gitlab.com/marvin.vanaalst)
+
 [![Website](https://img.shields.io/badge/Website-marvinvanaalst.github.io-000000?style=flat-square&logo=googlechrome&logoColor=white)](https://marvinvanaalst.github.io/)
 [![Email](https://img.shields.io/badge/Email-marvin.van.aalst%40rwth--aachen.de-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:marvin.van.aalst@rwth-aachen.de)
 
 ## Stats
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+  <img alt="Lifetime GitHub contribution stats and top languages" src="assets/stats-light.svg">
+</picture>
 
 ## Projects
 
