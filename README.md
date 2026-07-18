@@ -1,8 +1,17 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
+    <img alt="Lifetime GitHub contribution stats and top languages" src="assets/stats-light.svg" width="50%">
+  </picture>
+</p>
+
 # Empowering researchers in metabolic modeling
 
 ...to make work easier, faster and more reproducible
 
 Computational Systems Biology, RWTH Aachen
+
 
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--7434--0249-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-7434-0249)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dr._Marvin_van_Aalst-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dr-marvin-van-aalst-41a691175/)
@@ -13,13 +22,9 @@ Computational Systems Biology, RWTH Aachen
 [![Website](https://img.shields.io/badge/Website-marvinvanaalst.github.io-000000?style=flat-square&logo=googlechrome&logoColor=white)](https://marvinvanaalst.github.io/)
 [![Email](https://img.shields.io/badge/Email-marvin.van.aalst%40rwth--aachen.de-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:marvin.van.aalst@rwth-aachen.de)
 
-## Stats
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg">
-  <img alt="Lifetime GitHub contribution stats and top languages" src="assets/stats-light.svg">
-</picture>
+
+
 
 ## Projects
 
