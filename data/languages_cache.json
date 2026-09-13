@@ -3,12 +3,12 @@
     {
       "name": "Python",
       "bytes": 96341,
-      "pct": 51.5
+      "pct": 51.1
     },
     {
       "name": "Svelte",
       "bytes": 63786,
-      "pct": 34.1
+      "pct": 33.8
     },
     {
       "name": "JavaScript",
@@ -27,9 +27,9 @@
     },
     {
       "name": "Other",
-      "bytes": 4168,
-      "pct": 2.2
+      "bytes": 5417,
+      "pct": 2.9
     }
   ],
-  "last_updated": "2026-09-06"
+  "last_updated": "2026-09-13"
 }
