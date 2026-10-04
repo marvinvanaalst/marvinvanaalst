@@ -1,35 +1,35 @@
 {
   "languages": [
     {
+      "name": "JavaScript",
+      "bytes": 557317,
+      "pct": 53.3
+    },
+    {
+      "name": "HTML",
+      "bytes": 297116,
+      "pct": 28.4
+    },
+    {
       "name": "Python",
       "bytes": 96341,
-      "pct": 51.1
+      "pct": 9.2
     },
     {
       "name": "Svelte",
-      "bytes": 63786,
-      "pct": 33.8
-    },
-    {
-      "name": "JavaScript",
-      "bytes": 14434,
-      "pct": 7.7
+      "bytes": 56677,
+      "pct": 5.4
     },
     {
       "name": "TypeScript",
-      "bytes": 5504,
-      "pct": 2.9
-    },
-    {
-      "name": "CSS",
-      "bytes": 2970,
-      "pct": 1.6
+      "bytes": 13740,
+      "pct": 1.3
     },
     {
       "name": "Other",
-      "bytes": 5417,
-      "pct": 2.9
+      "bytes": 24670,
+      "pct": 2.4
     }
   ],
-  "last_updated": "2026-09-27"
+  "last_updated": "2026-10-04"
 }
