@@ -2,8 +2,8 @@
   "languages": [
     {
       "name": "JavaScript",
-      "bytes": 557417,
-      "pct": 53.3
+      "bytes": 556242,
+      "pct": 53.2
     },
     {
       "name": "HTML",
@@ -17,13 +17,13 @@
     },
     {
       "name": "Svelte",
-      "bytes": 56677,
+      "bytes": 56699,
       "pct": 5.4
     },
     {
       "name": "TypeScript",
-      "bytes": 13740,
-      "pct": 1.3
+      "bytes": 14898,
+      "pct": 1.4
     },
     {
       "name": "Other",
@@ -31,5 +31,5 @@
       "pct": 2.4
     }
   ],
-  "last_updated": "2026-10-11"
+  "last_updated": "2026-10-18"
 }
