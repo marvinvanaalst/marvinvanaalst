@@ -3,33 +3,33 @@
     {
       "name": "JavaScript",
       "bytes": 556242,
-      "pct": 52.4
+      "pct": 44.5
     },
     {
       "name": "HTML",
-      "bytes": 297116,
-      "pct": 28.0
+      "bytes": 481622,
+      "pct": 38.5
     },
     {
       "name": "Python",
       "bytes": 96341,
-      "pct": 9.1
+      "pct": 7.7
     },
     {
       "name": "Svelte",
-      "bytes": 64482,
-      "pct": 6.1
+      "bytes": 66369,
+      "pct": 5.3
     },
     {
       "name": "TypeScript",
-      "bytes": 23356,
-      "pct": 2.2
+      "bytes": 24390,
+      "pct": 2.0
     },
     {
       "name": "Other",
-      "bytes": 24670,
-      "pct": 2.3
+      "bytes": 24736,
+      "pct": 2.0
     }
   ],
-  "last_updated": "2026-11-15"
+  "last_updated": "2026-11-23"
 }
